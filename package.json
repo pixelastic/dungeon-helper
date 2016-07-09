@@ -1,0 +1,40 @@
+{
+  "name": "dungeon-helper",
+  "version": "0.0.1",
+  "description": "App for helping improvising dungeons on the fly",
+  "author": "Tim \"pixelastic\" Carry",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:pixelastic/dungeon-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixelastic/dungeon-helper/issues"
+  },
+  "engines": {
+    "node": "0.10.21",
+    "npm": "1.3.11"
+  },
+  "scripts": {
+    "download-names": "babel-node ./scripts/download-names.js",
+    "download-random": "babel-node ./scripts/download-random.js"
+  },
+  "devDependencies": {
+    "babel-cli": "6.7.5",
+    "babel-core": "6.7.6",
+    "babel-eslint": "6.0.2",
+    "babel-plugin-syntax-object-rest-spread": "6.5.0",
+    "babel-plugin-transform-object-rest-spread": "6.6.5",
+    "babel-preset-es2015": "6.6.0",
+    "bluebird": "3.4.1",
+    "eslint": "1.10.3",
+    "eslint-config-airbnb": "2.1.1",
+    "eslint-config-algolia": "4.5.0",
+    "eslint-plugin-algolia": "1.5.0",
+    "eslint-plugin-react": "3.11.3",
+    "json-stable-stringify": "1.0.1",
+    "lodash": "4.11.1",
+    "request": "2.72.0"
+  },
+  "dependencies": {}
+}
