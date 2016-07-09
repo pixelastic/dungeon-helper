@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+echo "Creating vendors bundle"
+vendors=./app/assets/vendors.js
+rm -f $vendors
+
+{
+  cat ./node_modules/react/dist/react.min.js;
+  printf "\n"
+  cat ./node_modules/react-dom/dist/react-dom.min.js;
+  printf "\n"
+} >> $vendors
