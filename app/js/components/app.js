@@ -5,16 +5,18 @@ import Randomizer from './randomizer';
 class App extends React.Component {
   render() {
     let randomizers = _.map(this.props.randomizers, (randomizer) => {
+      let key = randomizer.name;
       return (
         <Randomizer
           items={randomizer.items}
+          key={key}
           name={randomizer.name}
         />
       );
     });
     return (
       <div>
-        {randomizers[0]}
+        {randomizers}
       </div>
     );
   }

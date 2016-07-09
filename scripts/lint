@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-eslint ./app/*.js
+eslint ./app/js/**/*.js

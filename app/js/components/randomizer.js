@@ -1,14 +1,30 @@
 import React from 'react';
 
-class Randomizer extends React.Component {
+export default class Randomizer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      index: 0
+    };
+  }
+
+  // Increment the current pointer when clicking on the element
+  handleClick() {
+    this.setState({
+      index: this.state.index + 1
+    });
+  }
+
   render() {
-    let value = this.props.items[0];
+    let value = this.props.items[this.state.index];
+    let title = this.props.name;
     return (
-      <div>
-        <strong>{this.props.name}</strong>
-        <ul>
-          <li>{value}</li>
-        </ul>
+      <div
+        onClick={this.handleClick}
+      >
+        <strong>{title}</strong>
+        <pre>{value}</pre>
       </div>
     );
   }
@@ -18,5 +34,3 @@ Randomizer.propTypes = {
   items: React.PropTypes.array,
   name: React.PropTypes.string
 };
-
-export default Randomizer;
