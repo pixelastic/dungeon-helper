@@ -566,7 +566,7 @@ var props = {
     items: _lodash2.default.shuffle(_hard2.default)
   }, {
     name: 'Traps',
-    color: 'purple',
+    color: 'gold',
     items: _lodash2.default.shuffle(_traps2.default)
   }, {
     name: 'Loot (Common)',
@@ -574,7 +574,7 @@ var props = {
     items: _lodash2.default.shuffle(_common2.default)
   }, {
     name: 'Loot (Magic)',
-    color: 'gold',
+    color: 'purple',
     items: _lodash2.default.shuffle(_magic2.default)
   }, {
     name: 'NPCs',
