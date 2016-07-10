@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
+rm -rf public
 npm run build
 rm -rf node_modules/gh-pages/.cache
-rm -rf public
 gh-pages --dist public --branch gh-pages

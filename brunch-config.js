@@ -19,11 +19,6 @@ module.exports = {
     babel: {
       pattern: /\.js$/
     },
-    postcss: {
-      processors: [
-       require('autoprefixer')(['last 8 versions'])
-      ]
-    }
   },
   server: {
     port: 5010
