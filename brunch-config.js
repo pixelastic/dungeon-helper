@@ -3,16 +3,26 @@ module.exports = {
   files: {
     javascripts: {
       joinTo: {
-        'vendor.js': /^(?!app)/,
+        'vendors.js': /^(?!app)/,
         'app.js': /^app\/js/
       }
     },
-    stylesheets: {joinTo: 'app.css'}
+    stylesheets: {
+      joinTo: {
+        'vendors.css': /^app\/vendors\/css/,
+        'app.css': /^app\/css/
+      }
+    }
   },
 
   plugins: {
     babel: {
       pattern: /\.js$/
+    },
+    postcss: {
+      processors: [
+        require('autoprefixer')(['last 8 versions'])
+      ]
     }
   },
   server: {
