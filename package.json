@@ -15,6 +15,7 @@
     "lint": "./scripts/lint",
     "build": "./scripts/build",
     "serve": "./scripts/serve",
+    "deploy": "./scripts/deploy",
     "postinstall": "./scripts/postinstall"
   },
   "devDependencies": {
@@ -34,6 +35,7 @@
     "eslint-config-algolia": "4.5.0",
     "eslint-plugin-algolia": "1.5.0",
     "eslint-plugin-react": "3.11.3",
+    "gh-pages": "0.11.0",
     "postcss-brunch": "0.5.0",
     "tachyons": "4.0.1"
   },

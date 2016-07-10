@@ -13,8 +13,13 @@ export default class Randomizer extends React.Component {
 
   // Increment the current pointer when clicking on the element
   handleClick() {
+    let maxItems = this.props.items.length;
+    let nextIndex = this.state.index + 1;
+    if (nextIndex >= maxItems) {
+      nextIndex = 0;
+    }
     this.setState({
-      index: this.state.index + 1
+      index: nextIndex
     });
   }
 
@@ -36,7 +41,7 @@ export default class Randomizer extends React.Component {
         'pointer',
         'br-ns bb b--gray',
         'pa3',
-        'flex-auto w-100 w-33-l'
+        'flex-auto w-100 w-50-l'
       ),
       title: cx(
         'c-randomizer--title',
@@ -46,7 +51,7 @@ export default class Randomizer extends React.Component {
       text: cx(
         'c-randomizer--text',
         'mv0',
-        'lh-copy measure f3 tj'
+        'lh-copy measure f3 f4-l tj'
       )
     };
     return (
