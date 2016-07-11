@@ -6,6 +6,8 @@ a fun evening, I use those generators on my cell phone to help me build a story.
 
 Click on any part to generate a new random one.
 
+Note: Description are both in french and english.
+
 ## Sources:
 
 The lists are a mix and match of games, websites and own ideas. When

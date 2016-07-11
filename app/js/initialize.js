@@ -65,7 +65,7 @@ let props = {
     items: _.shuffle(monsterHard)
   }, {
     name: 'Traps',
-    color: 'purple',
+    color: 'gold',
     items: _.shuffle(traps)
   }, {
     name: 'Loot (Common)',
@@ -73,7 +73,7 @@ let props = {
     items: _.shuffle(lootCommon)
   }, {
     name: 'Loot (Magic)',
-    color: 'gold',
+    color: 'purple',
     items: _.shuffle(lootMagic)
   }, {
     name: 'NPCs',

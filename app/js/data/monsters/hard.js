@@ -36,7 +36,6 @@ export default [
   'Héros Minotaure & Champions Minotaures',
   'Lammasu &  Héros Centaure Taureau',
   'Lammasu & Champion Centaure Taureau & Nains du Chaos & Héros Centaure Taureau',
-  'Lancer sur le Tableau des',
   'Liche &  Revenants &  Spectres &  Roi des Tombes &  Seigneur Revenant',
   'Liche &  Revenants &  Spectres &  Seigneur Revenant',
   'Liche &  Squelettes',
