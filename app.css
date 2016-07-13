@@ -10,6 +10,7 @@
   font-style: normal; 
 }
 
+/* Custom colors per tile */
 .c-randomizer__synopsis {
   color: #357EDD;
   background-color: #000000;
@@ -60,20 +61,19 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  min-height: 300px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   background-blend-mode: multiply;
 }
-
 .c-randomizer--title {
   font-family: Title;
 }
 
-/* Special display for Cards */
+/* Special display for cards, with images */
 .c-randomizer__card {
   position: relative;
+  min-height: 300px;
 }
 .c-randomizer__card .c-randomizer--title {
   text-shadow: 1px 1px black;
