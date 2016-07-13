@@ -578,7 +578,7 @@ var props = {
     items: _lodash2.default.shuffle(_medium2.default)
   }, {
     name: 'Monsters (Hard)',
-    color: 'red',
+    color: 'dark-red',
     items: _lodash2.default.shuffle(_hard2.default)
   }, {
     name: 'Traps',
