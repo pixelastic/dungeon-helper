@@ -1,4 +1,4 @@
-/* eslint max-len\n\n0 */
+/* eslint max-len:0 */
 export default [
   'Aelburh Keep\n\nThis small tower sits upon an outcrop of rock, accessible by a single road. It appears deserted, but is inhabited by a peddler named Ealfard selling his wares.',
   'Aelstow Castle\n\nThis tower has rough-hewn stone walls with defensive battlements. It appears deserted, but is inhabited by a dragon named Ashmardum. The tower has been damaged by fire, and its upper floors are gone.',

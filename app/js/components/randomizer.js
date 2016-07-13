@@ -11,6 +11,24 @@ export default class Randomizer extends React.Component {
     };
   }
 
+  getContent(text) {
+    let image = null;
+    let regex = /<!-- (.*) -->(.*)/;
+    if (text.match(regex)) {
+      let matches = regex.exec(text);
+      image = matches[1];
+      text = matches[2];
+    }
+
+    // Convert multi-line text into multiple <p>
+    let split = text.split('\n\n');
+    text = _.map(split, (p) => {
+      return `<p>${p}</p>`;
+    }).join('\n');
+
+    return {text, image};
+  }
+
   // Increment the current pointer when clicking on the element
   handleClick() {
     let maxItems = this.props.items.length;
@@ -23,21 +41,14 @@ export default class Randomizer extends React.Component {
     });
   }
 
-  // Convert multiline text to HTML enclosed in <p>
-  text2HTML(text) {
-    let split = text.split('\n\n');
-    return _.map(split, (p) => {
-      return `<p>${p}</p>`;
-    }).join('\n');
-  }
 
   render() {
-    let value = this.text2HTML(this.props.items[this.state.index]);
     let title = this.props.name;
+    let content = this.getContent(this.props.items[this.state.index]);
     let classNames = {
       root: cx(
         'c-randomizer',
-        `${this.props.color} hover-bg-${this.props.color} hover-black`,
+        `black bg-${this.props.color}`,
         'pointer',
         'br-ns bb b--gray',
         'pa3',
@@ -54,15 +65,22 @@ export default class Randomizer extends React.Component {
         'lh-copy measure f3 f4-l tj'
       )
     };
+
+    let styles = {
+      root: {
+        backgroundImage: content.image ? `url(${content.image})` : null
+      }
+    };
     return (
       <div
         className={classNames.root}
         onClick={this.handleClick}
+        style={styles.root}
       >
         <h3 className={classNames.title}>{title}</h3>
         <div
           className={classNames.text}
-          dangerouslySetInnerHTML={{__html: value}}
+          dangerouslySetInnerHTML={{__html: content.text}}
         ></div>
       </div>
     );
