@@ -8,6 +8,15 @@ Click on any part to generate a new random one.
 
 Note: Description are both in french and english.
 
+## Usage
+
+If you want to run it locally:
+
+```
+npm install
+npm run serve
+```
+
 ## Sources:
 
 The lists are a mix and match of games, websites and own ideas. When

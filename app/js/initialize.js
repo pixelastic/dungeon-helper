@@ -61,7 +61,7 @@ let props = {
     items: _.shuffle(monsterMedium)
   }, {
     name: 'Monsters (Hard)',
-    color: 'red',
+    color: 'dark-red',
     items: _.shuffle(monsterHard)
   }, {
     name: 'Traps',
