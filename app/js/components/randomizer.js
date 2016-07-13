@@ -11,7 +11,9 @@ export default class Randomizer extends React.Component {
     };
   }
 
+
   getContent(text) {
+    // Get possible image
     let image = null;
     let regex = /<!-- (.*) -->(.*)/;
     if (text.match(regex)) {
@@ -26,7 +28,10 @@ export default class Randomizer extends React.Component {
       return `<p>${p}</p>`;
     }).join('\n');
 
-    return {text, image};
+    // Get type
+    let type = split.length > 1 ? 'text' : 'item';
+
+    return {text, image, type};
   }
 
   // Increment the current pointer when clicking on the element
@@ -44,11 +49,12 @@ export default class Randomizer extends React.Component {
 
   render() {
     let title = this.props.name;
-    let content = this.getContent(this.props.items[this.state.index]);
+    let item = this.props.items[this.state.index];
+    let content = this.getContent(item);
     let classNames = {
       root: cx(
-        'c-randomizer',
-        `black bg-${this.props.color}`,
+        `c-randomizer c-randomizer__${this.props.id}`,
+        this.props.isCard ? 'c-randomizer__card' : null,
         'pointer',
         'br-ns bb b--gray',
         'pa3',
@@ -56,13 +62,13 @@ export default class Randomizer extends React.Component {
       ),
       title: cx(
         'c-randomizer--title',
-        'f3',
+        'f2',
         'mv0'
       ),
       text: cx(
         'c-randomizer--text',
         'mv0',
-        'lh-copy measure f3 f4-l tj'
+        'lh-copy f3 f4-l tj'
       )
     };
 
@@ -88,7 +94,8 @@ export default class Randomizer extends React.Component {
 }
 
 Randomizer.propTypes = {
-  color: React.PropTypes.string,
+  id: React.PropTypes.string,
+  isCard: React.PropTypes.bool,
   items: React.PropTypes.array,
   name: React.PropTypes.string
 };

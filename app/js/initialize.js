@@ -15,73 +15,53 @@ import monsterMedium from './data/monsters/medium';
 import monsterHard from './data/monsters/hard';
 
 let appContainer = document.querySelectorAll('.js-app')[0];
-// --dark-red: #f00008;
-//   --red: #ff3223;
-//   --orange: #f3a801;
-//   --gold: #f2c800;
-//   --yellow: #ffde37;
-//   --purple: #7d5da9;
-//   --light-purple: #8d4f92;
-//   --hot-pink: #d62288;
-//   --dark-pink: #c64774;
-//   --pink: #f49cc8;
-//   --dark-green: #006C71;
-//   --green: #41D69F;
-//   --navy: #001b44;
-//   --dark-blue: #00449e;
-//   --blue: #357edd;
-//   --light-blue: #96ccff;
-//   --lightest-blue: #cdecff;
-//   --washed-blue: #f6fffe;
-//   --washed-green: #e8fdf5;
-//   --washed-yellow: #fff8d5;
-//   --light-pink: #efa4b8;
-//   --light-yellow: #f3dd70;
-//   --light-red: #ffd3c0;
 let props = {
   randomizers: [{
+    id: 'synopsis',
     name: 'Synopsis',
-    color: 'gray',
     items: _.shuffle(synopsis)
   }, {
+    id: 'rooms',
     name: 'Rooms',
-    color: 'orange',
     items: _.shuffle(rooms)
   }, {
+    id: 'doors',
     name: 'Doors',
-    color: 'dark-pink',
     items: _.shuffle(doors)
   }, {
+    id: 'monsters-easy',
     name: 'Monsters (Easy)',
-    color: 'green',
+    isCard: true,
     items: _.shuffle(monsterEasy)
   }, {
+    id: 'monsters-medium',
     name: 'Monsters (Medium)',
-    color: 'blue',
+    isCard: true,
     items: _.shuffle(monsterMedium)
   }, {
+    id: 'monsters-hard',
     name: 'Monsters (Hard)',
-    color: 'dark-red',
+    isCard: true,
     items: _.shuffle(monsterHard)
   }, {
+    id: 'traps',
     name: 'Traps',
-    color: 'gold',
     items: _.shuffle(traps)
   }, {
+    id: 'loot-common',
     name: 'Loot (Common)',
-    color: 'washed-green',
     items: _.shuffle(lootCommon)
   }, {
+    id: 'loot-magic',
     name: 'Loot (Magic)',
-    color: 'purple',
     items: _.shuffle(lootMagic)
   }, {
+    id: 'npcs',
     name: 'NPCs',
-    color: 'light-blue',
     items: _.shuffle(npcs)
   }, {
+    id: 'name',
     name: 'Name',
-    color: 'pink',
     items: _.shuffle(names)
   }]
 };
