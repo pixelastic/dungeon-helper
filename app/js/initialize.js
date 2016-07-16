@@ -8,6 +8,7 @@ import dungeonRooms from './data/dungeon/rooms';
 import dungeonDoors from './data/dungeon/doors';
 import dungeonTraps from './data/dungeon/traps';
 import monsterTrappings from './data/monsters/trappings';
+import monsterReactions from './data/monsters/reactions';
 import lootCommon from './data/loot/common';
 import lootCommonLarge from './data/loot/common_large';
 import lootMagic from './data/loot/magic';
@@ -58,6 +59,10 @@ render('monsters', [{
   name: 'Monster Trappings',
   classNames: 'bg-teal navy',
   items: monsterTrappings
+}, {
+  name: 'Monster Reactions',
+  classNames: 'bg-teal maroon',
+  items: monsterReactions
 }]);
 
 // Loot
