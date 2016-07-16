@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 mkdir -p app/vendors/css
 cp ./node_modules/tachyons/css/tachyons.min.css ./app/vendors/css
+cp ./node_modules/colors.css/css/colors.min.css ./app/vendors/css

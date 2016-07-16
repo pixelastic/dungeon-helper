@@ -10,50 +10,9 @@
   font-style: normal; 
 }
 
-/* Custom colors per tile */
-.c-randomizer__synopsis {
-  color: #357EDD;
-  background-color: #000000;
-}
-.c-randomizer__rooms {
-  color: #FFDE37;
-  background-color: #000000;
-}
-.c-randomizer__doors {
-  color: #41D69F;
-  background-color: #000000;
-}
-.c-randomizer__monsters-easy {
-  color: #F6FFFE;
-  background-color: #006C71;
-}
-.c-randomizer__monsters-medium {
-  color: #F4F4F4;
-  background-color: #00449E;
-}
-.c-randomizer__monsters-hard {
-  color: #F6FFFE;
-  background-color: #C64774;
-}
-.c-randomizer__traps {
-  color: #FF3223;
-  background-color: #000000;
-}
-.c-randomizer__loot-common {
-  color: #EFA4B8;
-  background-color: #000000;
-}
-.c-randomizer__loot-magic {
-  color: #7D5DA9;
-  background-color: #000000;
-}
-.c-randomizer__npcs {
-  color: #96ccff;
-  background-color: #000000;
-}
-.c-randomizer__name {
-  color: #FFD3C0;
-  background-color: #000000;
+h1 {
+  font-family: Title;
+  display: none;
 }
 
 .c-randomizer {

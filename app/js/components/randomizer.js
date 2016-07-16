@@ -53,8 +53,9 @@ export default class Randomizer extends React.Component {
     let content = this.getContent(item);
     let classNames = {
       root: cx(
-        `c-randomizer c-randomizer__${this.props.id}`,
+        `c-randomizer`,
         this.props.isCard ? 'c-randomizer__card' : null,
+        this.props.classNames,
         'pointer',
         'br-ns bb b--gray',
         'pa3',
@@ -94,7 +95,7 @@ export default class Randomizer extends React.Component {
 }
 
 Randomizer.propTypes = {
-  id: React.PropTypes.string,
+  classNames: React.PropTypes.string,
   isCard: React.PropTypes.bool,
   items: React.PropTypes.array,
   name: React.PropTypes.string

@@ -6,8 +6,7 @@ import Randomizer from './randomizer';
 class App extends React.Component {
   render() {
     let classNames = cx(
-      'bg-black',
-      'gray',
+      'bg-black gray',
       'flex flex-row flex-wrap'
     );
     let randomizers = _.map(this.props.randomizers, (randomizer) => {
