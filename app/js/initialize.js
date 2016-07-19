@@ -92,14 +92,14 @@ render('loot', [{
 // NPCS
 render('npcs', [{
   name: 'Name',
-  classNames: 'bg-green navy',
+  classNames: 'bg-silver navy',
   items: npcNames
 }, {
   name: 'Traits',
-  classNames: 'bg-green yellow',
+  classNames: 'bg-silver maroon',
   items: npcTraits
 }, {
   name: 'Motivations',
-  classNames: 'bg-green black',
+  classNames: 'bg-silver black',
   items: npcMotivations
 }]);
