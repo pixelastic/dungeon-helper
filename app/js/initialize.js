@@ -15,6 +15,7 @@ import lootMagic from './data/loot/magic';
 import lootBoss from './data/loot/boss';
 import lootPotionTrappings from './data/loot/potion_trappings';
 import npcNames from './data/npcs/names';
+import npcTraits from './data/npcs/traits';
 import npcMotivations from './data/npcs/motivations';
 
 function render(name, tiles) {
@@ -93,6 +94,10 @@ render('npcs', [{
   name: 'Name',
   classNames: 'bg-green navy',
   items: npcNames
+}, {
+  name: 'Traits',
+  classNames: 'bg-green yellow',
+  items: npcTraits
 }, {
   name: 'Motivations',
   classNames: 'bg-green black',
